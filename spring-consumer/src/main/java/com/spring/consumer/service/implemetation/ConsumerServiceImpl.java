@@ -7,10 +7,11 @@ import com.spring.consumer.service.ConsumerService;
 
 @Service
 public class ConsumerServiceImpl implements ConsumerService{
-
+ 
 	@Override
-	public void action(Message message) {
-		System.out.println(message.getText());
+	public void action(Message message) throws Exception{
+		throw new Exception("Erro");
+		//System.out.println(message.getText());
 	}
 	
 
