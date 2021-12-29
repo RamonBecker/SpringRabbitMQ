@@ -10,8 +10,7 @@ public class ConsumerServiceImpl implements ConsumerService{
  
 	@Override
 	public void action(Message message) throws Exception{
-		throw new Exception("Erro");
-		//System.out.println(message.getText());
+		System.out.println(message.getText());
 	}
 	
 
