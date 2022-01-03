@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.spring.producer.dto.Message;
+import com.spring.producer.dto.MessageQueue;
 import com.spring.producer.service.AmqpService;
 
 @RestController
@@ -18,7 +18,7 @@ public class AmqpApi {
 	
 	@ResponseStatus(HttpStatus.ACCEPTED)
 	@PostMapping("/send")
-	public void sendToConsumer(@RequestBody Message message) {
+	public void sendToConsumer(@RequestBody MessageQueue message) {
 		service.sendToConsumer(message);
 	}
 }

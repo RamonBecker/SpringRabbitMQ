@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.spring.producer.amqp.AmqpProducer;
-import com.spring.producer.dto.Message;
+import com.spring.producer.dto.MessageQueue;
 
 @Component
-public class ProducerRabbitMQ implements AmqpProducer<Message> {
+public class ProducerRabbitMQ implements AmqpProducer<MessageQueue> {
 
 	@Autowired
 	private RabbitTemplate rabbitTemplate;
@@ -22,7 +22,7 @@ public class ProducerRabbitMQ implements AmqpProducer<Message> {
 	private String exchange;
 
 	@Override
-	public void producer(Message message) {
+	public void producer(MessageQueue message) {
 		try {
 			rabbitTemplate.convertAndSend(exchange, queue, message);
 		} catch (Exception e) {
