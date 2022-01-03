@@ -1,9 +1,9 @@
 package com.spring.consumer.dto;
 
-public class Message {
+public class MessageQueue {
 	private String text;
 
-	public Message() {
+	public MessageQueue() {
 	}
 
 	public String getText() {

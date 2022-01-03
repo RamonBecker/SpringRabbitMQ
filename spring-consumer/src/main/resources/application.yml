@@ -15,3 +15,4 @@ spring:
         producer: dl.producer.aula-spring
       parking-lot:
         producer: pl.producer.aula-spring
+      

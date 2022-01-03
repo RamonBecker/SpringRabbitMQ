@@ -1,8 +1,8 @@
 package com.spring.consumer.service;
 
-import com.spring.consumer.dto.Message;
+import com.spring.consumer.dto.MessageQueue;
 
 public interface ConsumerService {
 	
-	void action(Message message) throws Exception;
+	void action(MessageQueue message) throws Exception;
 }
