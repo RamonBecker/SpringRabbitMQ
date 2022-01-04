@@ -15,4 +15,6 @@ spring:
         producer: dl.producer.aula-spring
       parking-lot:
         producer: pl.producer.aula-spring
+    listener:
+      time-retry: 00 00 10 * * *
       
